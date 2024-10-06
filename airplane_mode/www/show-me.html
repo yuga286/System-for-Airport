@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Rectangle</title>
+    <style>
+        .rectangle {
+            width: 200px;
+            height: 200px;
+            background-color: {{ frappe.form_dict.color or 'black' }};
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="rectangle"></div>
+</body>
+</html>

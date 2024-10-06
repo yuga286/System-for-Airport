@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{###}",
+ "creation": "2024-09-30 04:29:09.780213",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_information_section",
+  "name1",
+  "column_break_eaok",
+  "email",
+  "contract_details_section",
+  "rent_amount",
+  "shop_number",
+  "column_break_hzdd",
+  "date_of_expiry",
+  "shop_name",
+  "physical_properties_section",
+  "area_of_the_shop",
+  "gate_number_of_the_shop",
+  "column_break_wbkp",
+  "shop_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_information_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Information"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Shop Keeper Name"
+  },
+  {
+   "fieldname": "column_break_eaok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Int",
+   "label": "Shop Number"
+  },
+  {
+   "fieldname": "column_break_hzdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "label": "Date Of Expiry"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name"
+  },
+  {
+   "fieldname": "physical_properties_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Properties"
+  },
+  {
+   "fieldname": "area_of_the_shop",
+   "fieldtype": "Data",
+   "label": "Area Of The Shop"
+  },
+  {
+   "fieldname": "gate_number_of_the_shop",
+   "fieldtype": "Data",
+   "label": "Gate Number of the Shop"
+  },
+  {
+   "fieldname": "column_break_wbkp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_type",
+   "fieldtype": "Select",
+   "label": "Shop Type",
+   "options": "Tent\nShop"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-05 23:49:31.824737",
+ "modified_by": "Administrator",
+ "module": "Mode",
+ "name": "Shop Info",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
