@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2024-12-25 03:46:59.832735",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "task_description",
+  "audit_completed",
+  "audit_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Data",
+   "label": "Task Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "audit_completed",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Audit Completed"
+  },
+  {
+   "fieldname": "audit_status",
+   "fieldtype": "Select",
+   "label": "Audit Status",
+   "options": "Not Started\nOn holed\nCompleted"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-26 02:57:31.935163",
+ "modified_by": "Administrator",
+ "module": "Mode",
+ "name": "New Task",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Portal</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            padding: 3em 2em;
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #00bcd4;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+
+        label {
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        select {
+            width: 30%;
+            padding: 0.5em;
+            margin: 0 1em;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #444;
+        }
+
+        .card {
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 2em;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card h2 {
+            color: #00bcd4;
+            font-size: 1.3em;
+            margin-bottom: 1em;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin-bottom: 0.5em;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2em;
+        }
+
+        .mt-5 {
+            margin-top: 2.5em;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .mr-3 {
+            margin-right: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    {% set shops = frappe.get_all("Shop Info", filters={"status": "Available for lease"}, fields=["shop_name","area_of_the_shop", "status", "route"]) %}
+    {% block page_content %}
+    <h1>{{ _("Shop Portal") }}</h1>
+
+        <div class="mt-5 row">
+            {% for shop in shops %}
+            <div class="card mr-3 p-3" style="width: 15em;">
+                <h2>{{ shop.shop_name }}</h2>
+                <p><strong>Shop Name:</strong> {{ shop.shop_name }}</p>
+                <p><strong>Area:</strong> {{ shop.area_of_the_shop }}</p>
+                <p><strong>Owner:</strong> {{ shop.shop_name }}</p>
+                <a href="/{{ shop.route |e }}" class="btn btn-primary">Details</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

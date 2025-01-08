@@ -1,0 +1,18 @@
+[
+ {
+  "description": "Done the all task and submit it",
+  "docstatus": 0,
+  "doctype": "Task Type",
+  "is_standard": 1,
+  "modified": "2024-12-25 03:39:38.473991",
+  "name": "Completed"
+ },
+ {
+  "description": "Everything is done just the nalling the Task",
+  "docstatus": 0,
+  "doctype": "Task Type",
+  "is_standard": 1,
+  "modified": "2024-12-25 03:39:28.112269",
+  "name": "All Most Done"
+ }
+]

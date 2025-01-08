@@ -26,7 +26,8 @@
   {
    "fieldname": "flight_hours",
    "fieldtype": "Duration",
-   "label": "Flight Hours"
+   "label": "Flight Hours",
+   "read_only": 1
   },
   {
    "fieldname": "role",
@@ -43,7 +44,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 03:14:03.465686",
+ "modified": "2024-12-23 22:43:39.914524",
  "modified_by": "Administrator",
  "module": "Mode",
  "name": "Crew Members Info",

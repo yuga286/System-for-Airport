@@ -8,6 +8,13 @@ app_license = "mit"
 # Apps
 # ------------------
 
+
+fixtures=[
+    {"dt":"Task Type",
+     "filters":{"is_standard":1}
+    }
+]
+
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
@@ -66,6 +73,7 @@ app_license = "mit"
 
 # Generators
 # ----------
+
 
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
@@ -145,26 +153,27 @@ app_license = "mit"
 # 	}
 # }
 
+
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"airplane_mode.tasks.all"
-# 	],
-# 	"daily": [
-# 		"airplane_mode.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"airplane_mode.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"airplane_mode.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"airplane_mode.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"airplane_mode.tasks.all"
+	# ],
+	"daily": [
+		"airplane_mode.api.get_deletetask"
+	]
+	# "hourly": [
+	# 	"airplane_mode.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"airplane_mode.tasks.weekly"
+	# ],
+	# "monthly": [
+    #     "airplane_mode.mode.doctype.rent_reminder.rent_reminder.send_rent_reminders"
+    # ]
+}
 
 # Testing
 # -------
@@ -242,3 +251,12 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# portal_menu_items = [
+#     {
+#         "title": "Portal",
+#         "route": "/portal",
+#         "reference_doctype": "Shop Info",
+#         # "role": "",  # Adjust based on who should access
+#         # "module_name": "Shop Portal"
+#     }
+# ]

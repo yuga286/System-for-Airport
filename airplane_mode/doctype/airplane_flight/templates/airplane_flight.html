@@ -1,0 +1,11 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title |e }}</h1>
+<h1>Airline: {{ airplane |e }}</h1>
+<h1>{{doc.source_airport_code}}->{{doc.destination_airport_code}}</h1>
+<h1>{{doc.date_of_departure}} | {{doc.time_of_departure}}</h1>
+<h1>Duration: {{frappe.utils.format_duration(doc.duration)}}</h1>
+<a href="http://airplane_mode.com:8000/ticket-booking/new?flight={{ doc.Flight }}&flight_price={{ doc.flight_price }}" class="btn btn-primary">Book Ticket</a>
+
+{% endblock %}
