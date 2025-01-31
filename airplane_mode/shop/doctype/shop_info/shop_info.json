@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{###}",
+ "creation": "2024-09-30 04:29:09.780213",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_information_section",
+  "shop_keeper_name",
+  "column_break_eaok",
+  "email",
+  "contract_details_section",
+  "rent_amount",
+  "shop_number",
+  "column_break_hzdd",
+  "date_of_expiry",
+  "shop_name",
+  "physical_properties_section",
+  "area_of_the_shop",
+  "gate_number_of_the_shop",
+  "column_break_wbkp",
+  "shop_type",
+  "is_published",
+  "route",
+  "section_break_ebyf",
+  "airport_name",
+  "enable_rent_reminder",
+  "column_break_cdtn",
+  "status",
+  "rent_payment"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_information_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Information"
+  },
+  {
+   "fieldname": "shop_keeper_name",
+   "fieldtype": "Data",
+   "label": "Shop Keeper Name"
+  },
+  {
+   "fieldname": "column_break_eaok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Int",
+   "label": "Shop Number"
+  },
+  {
+   "fieldname": "column_break_hzdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "label": "Date Of Expiry"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name"
+  },
+  {
+   "fieldname": "physical_properties_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Properties"
+  },
+  {
+   "fieldname": "area_of_the_shop",
+   "fieldtype": "Data",
+   "label": "Area Of The Shop"
+  },
+  {
+   "fieldname": "gate_number_of_the_shop",
+   "fieldtype": "Data",
+   "label": "Gate Number of the Shop"
+  },
+  {
+   "fieldname": "column_break_wbkp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_type",
+   "fieldtype": "Select",
+   "label": "Shop Type",
+   "options": "Tent\nShop"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is_Published?"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "section_break_ebyf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "airport_name",
+   "fieldtype": "Link",
+   "label": "Airport Name",
+   "options": "Airport"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_rent_reminder",
+   "fieldtype": "Check",
+   "label": "Enable Rent Reminder"
+  },
+  {
+   "fieldname": "column_break_cdtn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "On lease\nAvailable for lease"
+  },
+  {
+   "fieldname": "rent_payment",
+   "fieldtype": "Select",
+   "label": "Rent Payment",
+   "options": "Payment Done\nPayment Pending",
+   "permlevel": 1
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2025-01-13 01:06:05.370481",
+ "modified_by": "Administrator",
+ "module": "Shop",
+ "name": "Shop Info",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "portl",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

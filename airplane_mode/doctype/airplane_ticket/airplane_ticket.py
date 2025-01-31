@@ -20,22 +20,24 @@ class AirplaneTicket(Document):
                 add_on_items.add(add_on.item)
                 unique_add_ons.append(add_on)
             else:
-                frappe.msgprint(("Duplicate add-on '{0}' removed.").format(add_on.item))
+                frappe.msgprint(("Duplicate add-on '{0}' removed.").format(str(add_on.item)))
 
         self.set("add_ons", unique_add_ons)
 
-    def calculate_total_amount(self):
+    def before_save(self):
         self.remove_duplicate_add_ons()
-        price= self.flight_price or 0  
+        price= float(self.flight_price or 0)  
 
-        total_amount =price
+        add_on_amount = 0
+
+        # total_amount =price
         if self.add_ons:
             for add_on in self.add_ons:
-                add_on_amount = add_on.amount or 0
-                total_amount += add_on_amount
-        self.total_amount = total_amount
+                add_on_amount += float(add_on.amount or 0)
+                # total_amount += add_on_amount
+        self.total_amount = price + add_on_amount
 
-        return total_amount
+        # return total_amount
     
 
     
@@ -46,18 +48,18 @@ class AirplaneTicket(Document):
 
 
     
-    def before_insert(self):
-        if not self.flight:
-            frappe.throw("Flight field is missing or not selected.")
-        airplane_flight_doc = frappe.get_doc("Airplane Flight", self.flight)
-        if not airplane_flight_doc.airplane:
-            frappe.throw("The selected flight does not have an associated airplane.")
+    # def before_insert(self):
+    #     if not self.flight:
+    #         frappe.throw("Flight field is missing or not selected.")
+    #     airplane_flight_doc = frappe.get_doc("Airplane Flight", self.flight)
+    #     if not airplane_flight_doc.airplane:
+    #         frappe.throw("The selected flight does not have an associated airplane.")
         
-        airplane = frappe.get_doc("Airplane", airplane_flight_doc.airplane)
-        capacity = airplane.capacity
+    #     airplane = frappe.get_doc("Airplane", airplane_flight_doc.airplane)
+    #     capacity = airplane.capacity
         
-        current_ticket_count = frappe.db.count("Airplane Ticket", filters={
-            "flight": self.flight
-        })
-        if current_ticket_count >= capacity:
-            frappe.throw(f"No more tickets can be issued. The airplane's capacity of {capacity} seats is full.")
+    #     current_ticket_count = frappe.db.count("Airplane Ticket", filters={
+    #         "flight": self.flight
+    #     })
+    #     if current_ticket_count >= capacity:
+    #         frappe.throw(f"No more tickets can be issued. The airplane's capacity of {capacity} seats is full.")

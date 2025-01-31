@@ -18,6 +18,7 @@
   "section_break_daap",
   "add_ons",
   "section_break_apod",
+  "column_break_anae",
   "flight_price",
   "column_break_tahq",
   "total_amount",
@@ -110,12 +111,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "flight_price",
-   "fieldtype": "Currency",
-   "label": "Flight Price",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_tahq",
    "fieldtype": "Column Break"
   },
@@ -157,12 +152,22 @@
    "fieldname": "gate_number",
    "fieldtype": "Data",
    "label": "Gate Number"
+  },
+  {
+   "fieldname": "column_break_anae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "flight.flight_price",
+   "fieldname": "flight_price",
+   "fieldtype": "Currency",
+   "label": "Flight Price"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-06 01:59:04.754021",
+ "modified": "2025-01-13 01:47:42.457694",
  "modified_by": "Administrator",
  "module": "Mode",
  "name": "Airplane Ticket",
