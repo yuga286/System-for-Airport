@@ -39,3 +39,5 @@ def get_deletetask():
 @frappe.whitelist(allow_guest=True)
 def new_doc():
 	frappe.masgprint('Hello')
+
+
